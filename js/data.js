@@ -59,7 +59,7 @@ async function loadFromURL(url) {
 /* ── Inicialização ───────────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
   // A URL do seu arquivo CSV exportado do Google Sheets
-  const URL_AUTOMATICA = 'https://raw.githubusercontent.com/JottaFilho/bi-viario/main/data/Bse de Dados - Sinistros em Natal_RN - 2021-2026 - Página1_.csv';
+  const URL_AUTOMATICA = 'https://raw.githubusercontent.com/JottaFilho/bi-viario/main/data/Bse de Dados - Sinistros em Natal_RN - 2021-2026 - Página1_ .csv;
   
   // Se quiser que carregue sempre, descomente a linha abaixo:
   loadFromURL(URL_AUTOMATICA);
