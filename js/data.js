@@ -59,7 +59,7 @@ async function loadFromURL(url) {
 /* ── Inicialização ───────────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
   // Use o caminho relativo direto do repositório
-  const URL_AUTOMATICA = 'data/base_de_dados_natal.csv'; 
+  const URL_AUTOMATICA = 'https://raw.githubusercontent.com/JottaFilho/bi-viario/main/data/base_de_dados_natal.csv'; 
   
   loadFromURL(URL_AUTOMATICA);
 });
