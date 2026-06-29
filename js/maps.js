@@ -15,16 +15,16 @@ const FS_STATE = { map:null, heatLayer:null, dotsLayer:null, type:null, mode:'he
 
 /* ── Configuração visual de cada mapa ────────────────────── */
 const MAP_CFG = {
-  all:    { gradient:{0.4:'#0ea5e9',0.65:'#fbbf24',1:'#f43f5e'}, dotColor:'#00d4ff', radius:16, title:'🔵 Total Geral de Sinistros' },
-  ferido: { gradient:{0.4:'#22d3a5',0.65:'#fbbf24',1:'#f43f5e'}, dotColor:'#fbbf24', radius:18, title:'🟡 Sinistros com Feridos' },
-  obito:  { gradient:{0.4:'#f43f5e',0.65:'#fbbf24',1:'#ffffff'}, dotColor:'#f43f5e', radius:20, title:'🔴 Sinistros com Óbito' },
+  all:    { gradient:{0.15:'#0ea5e9',0.35:'#22d3a5',0.55:'#fbbf24',0.8:'#f97316',1:'#f43f5e'}, dotColor:'#00d4ff', radius:10, blur:16, title:'🔵 Total Geral de Sinistros' },
+  ferido: { gradient:{0.15:'#0ea5e9',0.35:'#22d3a5',0.55:'#fbbf24',0.8:'#f97316',1:'#f43f5e'}, dotColor:'#fbbf24', radius:11, blur:17, title:'🟡 Sinistros com Feridos' },
+  obito:  { gradient:{0.2:'#22d3a5',0.45:'#fbbf24',0.7:'#f97316',1:'#f43f5e'},                  dotColor:'#f43f5e', radius:13, blur:18, title:'🔴 Sinistros com Óbito' },
 };
 
 /* ── URL do tile conforme tema ───────────────────────────── */
 function getTileUrl(){
-  return document.documentElement.classList.contains('light')
-    ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+  return document.documentElement.classList.contains('dark')
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
 }
 
 /* ── Cria (ou retorna) mapa Leaflet ──────────────────────── */
@@ -61,7 +61,7 @@ function drawMap(stateObj, coords, cfg, mode){
   if(mode === 'heat'){
     stateObj.heatLayer = L.heatLayer(
       coords.map(([a,b])=>[a,b,1]),
-      { radius:cfg.radius, blur:14, maxZoom:17, gradient:cfg.gradient }
+      { radius:cfg.radius, blur:cfg.blur||16, maxZoom:19, max:1.0, minOpacity:0.2, gradient:cfg.gradient }
     ).addTo(stateObj.map);
   } else {
     const group = L.layerGroup();
