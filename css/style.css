@@ -6,21 +6,23 @@
 *{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  --bg:#06111d;--bg2:#0b1929;--bg3:#101f30;--card:#0d1c2d;--card2:#121f30;
-  --blue:#00d4ff;--blue2:#0ea5e9;--teal:#06d6b0;--green:#22d3a5;
-  --text:#dde8f5;--muted:#5f8aaa;--border:#1a3050;
-  --red:#f43f5e;--amber:#fbbf24;--purple:#a78bfa;
-  --sidebar:230px;
-  --map-bg:#061526;
-}
 
-/* ── TEMA CLARO ──────────────────────────────────────────── */
-html.light{
   --bg:#f0f4f8;--bg2:#e2eaf2;--bg3:#d4dfe9;--card:#ffffff;--card2:#f7fafc;
   --blue:#0077aa;--blue2:#0ea5e9;--teal:#059669;--green:#16a34a;
   --text:#1a2e42;--muted:#5a7a96;--border:#b8cfe0;
   --red:#e11d48;--amber:#d97706;--purple:#7c3aed;
+  --sidebar:230px;
   --map-bg:#dce9f5;
+
+}
+
+/* ── TEMA CLARO ──────────────────────────────────────────── */
+html.dark{
+  --bg:#06111d;--bg2:#0b1929;--bg3:#101f30;--card:#0d1c2d;--card2:#121f30;
+  --blue:#00d4ff;--blue2:#0ea5e9;--teal:#06d6b0;--green:#22d3a5;
+  --text:#dde8f5;--muted:#5f8aaa;--border:#1a3050;
+  --red:#f43f5e;--amber:#fbbf24;--purple:#a78bfa;
+  --map-bg:#061526;
 }
 
 /* ── BASE ────────────────────────────────────────────────── */
