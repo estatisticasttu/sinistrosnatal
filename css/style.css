@@ -155,7 +155,7 @@ canvas{cursor:pointer}
 /* ── LANDING ─────────────────────────────────────────────── */
 #land{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999}
 .land-box{text-align:center;padding:36px 40px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;max-width:460px}
-.land-box img{width:130px;border-radius:10px;margin-bottom:18px}
+.land-box img{width:230px;border-radius:10px;margin-bottom:8px}
 .land-box h2{font-family:'Syne',sans-serif;font-size:18px;color:var(--blue);margin-bottom:8px}
 .land-box p{color:var(--muted);font-size:12px;margin-bottom:22px;line-height:1.6}
 .land-box code{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1px 5px;font-size:11px;color:var(--blue2)}
@@ -211,8 +211,8 @@ canvas{cursor:pointer}
 #theme-toggle:hover{border-color:var(--blue2);color:var(--blue2)}
 
 /* Leaflet no tema claro */
-html.light .leaflet-control-zoom a{background:var(--card);color:var(--text);border-color:var(--border)}
-html.light .leaflet-control-zoom a:hover{background:var(--bg3)}
+html.dark .leaflet-control-zoom a{background:var(--card);color:var(--text);border-color:var(--border)}
+html.dark .leaflet-control-zoom a:hover{background:var(--bg3)}
 
 /* ── MODAL FULLSCREEN ────────────────────────────────────── */
 #fs-modal{
